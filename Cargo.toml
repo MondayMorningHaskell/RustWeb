@@ -1,0 +1,16 @@
+[package]
+name = "rust_web"
+version = "0.1.0"
+authors = ["James Bowen <jhb563@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name="pg_basic"
+test=false
+bench=false
+
+[dependencies]
+chrono="0.4"
+postgres={version="0.17.3", features=["with-chrono-0_4"]}
