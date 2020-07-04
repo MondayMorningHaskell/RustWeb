@@ -14,3 +14,5 @@ bench=false
 [dependencies]
 chrono="0.4"
 postgres={version="0.17.3", features=["with-chrono-0_4"]}
+diesel={version="1.4.4", features=["postgres", "chrono"]}
+dotenv="0.15.0"
