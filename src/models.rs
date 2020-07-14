@@ -1,8 +1,10 @@
 use chrono::prelude::*;
 use diesel::{Queryable, Insertable};
 use super::schema::*;
+use rocket::FromForm;
+use serde_derive::{Deserialize, Serialize};
 
-#[derive(Insertable)]
+#[derive(Insertable, Deserialize, Serialize, FromForm)]
 #[table_name="users"]
 pub struct User {
     pub name: String,
@@ -10,7 +12,7 @@ pub struct User {
     pub age: i32,
 }
 
-#[derive(Queryable)]
+#[derive(Queryable, Serialize)]
 pub struct UserEntity {
     pub id: i32,
     pub name: String,

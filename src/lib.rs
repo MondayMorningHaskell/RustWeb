@@ -1,5 +1,8 @@
 #[macro_use]
 extern crate diesel;
+extern crate rocket;
+extern crate rocket_contrib;
+extern crate serde_derive;
 
 pub mod models;
 pub mod schema;
