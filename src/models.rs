@@ -37,3 +37,16 @@ pub struct ArticleEntity {
     pub published_at: DateTime<Utc>,
     pub author_id: i32,
 }
+
+#[derive(Insertable)]
+pub struct AuthInfo {
+    pub user_id: i32,
+    pub password_hash: String,
+}
+
+#[derive(Queryable)]
+pub struct AuthInfoEntity {
+    pub id: i32,
+    pub user_id: i32,
+    pub password_hash: String,
+}
