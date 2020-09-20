@@ -1,3 +1,4 @@
+#![feature(test)]
 #[macro_use]
 extern crate diesel;
 extern crate rocket;
@@ -6,6 +7,7 @@ extern crate serde_derive;
 
 pub mod models;
 pub mod schema;
+pub mod sorter;
 
 #[cfg(test)]
 mod tests {
